@@ -7,6 +7,8 @@ headers or license texts.
 
 ## Main project lineage
 
+- **NANO-BLAST project authors** — original SMSTang Tang Nano 20K port and
+  integration work. This release continues and modifies that work.
 - **nand2mario (NAND2Mario)** — creator of the original SMSTang project.
   This release also uses nand2mario's original menu system, PicoRV32 IOSys
   menu firmware foundation, and SD-card core-switching mechanism.
