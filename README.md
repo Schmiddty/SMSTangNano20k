@@ -1,10 +1,9 @@
+
 # SMSTang Nano 20k v1.0.0
 
 SMSTang is a Sega Master System / Game Gear FPGA core for the **Sipeed Tang Nano 20K** (GW2AR-18C). It is a port of the **SMS-MiSTer core** to the Tang Nano 20K platform.
 
-The original SMSTang project was created by **nand2mario (NAND2Mario)**. This release also uses nand2mario's original menu system, PicoRV32 IOSys firmware architecture, and SD-card core-switching mechanism.
-
-This repository/release bundles only the SMSTang FPGA core. The shared firmware can also select compatible NESTang, SNESTang, and GBTang core images when users provide those images themselves.
+This release continues the work of the original SMSTang and NANO-BLAST projects, together with the upstream MiSTer core and the shared Tang Nano firmware ecosystem.
 
 ## Ready-to-use files
 
@@ -25,7 +24,7 @@ These three files are included in the repository and as downloads on the [v1.0.0
 
 ## Shared firmware and core switching
 
-The included firmware retains nand2mario's **Select core** menu and scans `SD:/cores/*.bin`. It can select compatible core images for the following systems:
+The included firmware retains the original **Select core** menu and scans `SD:/cores/*.bin`. It can select compatible core images for the following systems:
 
 | Core | Firmware core ID | SD-card image |
 |---|---:|---|
@@ -76,19 +75,49 @@ For the shared firmware build, install `curl`, `unzip`, Python 3, and a RISC-V b
 - `SD_CARD/` — supplied SMSTang core image in its expected SD-card location.
 - `LICENSE` and `THIRD_PARTY_NOTICES.md` — licensing and attribution.
 
-## Flash locations
-
-- FPGA `.fs`: `0x000000`
-- Shared PicoRV32 IOSys firmware: `0x500000`
-
-Never erase the entire SPI flash when updating either image.
-
 ## Roadmap
 
 - Fix any outstanding bugs.
 - Port SMSTang to the MiSTle framework.
 
-## Credits and AI disclosure
+## Credits and acknowledgements
+
+SMSTang is a derivative project built on the work of many developers and open-source projects. This release would not exist without their contributions.
+
+### Main project lineage
+
+- **NANO-BLAST project authors** — original SMSTang Tang Nano 20K port and integration work. This release continues and modifies that work.
+- **nand2mario (NAND2Mario)** — creator of the original SMSTang project. Original menu system, PicoRV32 IOSys firmware foundation, and SD-card core-switching implementation.
+  https://github.com/nand2mario/smstang
+- **MiSTer-devel SMS_MiSTer contributors** — upstream Sega Master System / Game Gear core from which SMSTang is ported.
+  https://github.com/MiSTer-devel/SMS_MiSTer
+- **Ben** — original Papilio Sega Master System implementation, identified by the SMS_MiSTer project as an earlier basis for its core.
+  http://fpga-hacks.blogspot.de/
+
+### FPGA and RTL contributors
+
+- **Daniel Wallner** — original T80 Z80 CPU core.
+- **Sorgelig** — T80 updates and other inherited RTL contributions.
+- **Jose Tejada (jt / Jotego)** — jt89 PSG implementation.
+- **Sameer Puri** — HDMI/TMDS implementation components.
+  https://github.com/sameer
+- **Katsumi Degawa** — DualShock controller RTL.
+- **Alastair M. Robinson** — audio/PWM RTL components.
+- **Claire Xenia Wolf** — PicoRV32 and simpleuart.
+- **Gowin Semiconductor Corporation** — Gowin support and generated RTL components where identified by source headers.
+
+### Shared firmware and related projects
+
+- **nand2mario and the SNESTang project contributors** — SNESTang v0.8 firmware source used as the shared firmware foundation, with SMSTang-specific modifications.
+  https://github.com/nand2mario/snestang
+- **Sergiy Dvodnenko (srg320) and gyurco** — creators of SNES_FPGA, acknowledged by the SNESTang project as the basis for its SNES core.
+- **NESTang and SNESTang contributors** — contributions to the shared Tang Nano firmware, controller, menu, and core-switching ecosystem.
+
+Additional original authors and contributors are identified in the copyright and license headers retained in the individual source files.
+
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md), `LICENSE`, and individual source headers for further attribution and applicable license terms. This summary does not replace those notices.
+
+## AI disclosure
 
 Development of this port was assisted by **ChatGPT, using the free version**.
 
