@@ -1,0 +1,19 @@
+SMSTang FPGA build — Windows / Tang Nano 20K
+============================================
+
+Requirements
+- Tang Nano 20K board (GW2AR-18C / GW2AR-LV18QN88C8/I7)
+- Gowin EDA for Windows
+- Python 3 on PATH
+
+Build
+1. Open this fpga folder.
+2. Run build_windows.bat.
+3. The script creates build\build.tcl and runs it with Gowin gw_sh.exe.
+4. Confirm the build log reports success and a fresh .fs exists under build\.
+
+The default gw_sh.exe path is the user's standard Gowin V1.9.11.03 installation. Set
+GOWIN_GW_SH to override it. The script removes stale .fs/.bin outputs before building.
+
+The FPGA image is programmed at the normal bitstream address 0x000000. Do not erase
+the entire SPI flash when updating the FPGA image.

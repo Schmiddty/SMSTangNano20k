@@ -1,0 +1,13 @@
+2026-11-17 - SMSTang v1.0.0 release documentation
+- Documented shared core IDs: NESTang=1, SNESTang=2, GBTang=3, SMSTang=5.
+- Clarified that only SMSTang FPGA source and images are bundled.
+- Documented BlueRetro compatibility notes and upstream credits.
+
+2026-11-12 - Shared firmware core support
+- CORE_ID 3 is identified as GBTang.
+- CORE_ID 5 remains identified as SMSTang.
+- Existing Select core menu is retained; it discovers /cores/*.bin dynamically.
+- .gb is accepted exactly and sent through the IOSys raw ROM loader.
+- .nes, .sms and .gg raw loading remains available; .sfc/.smc retain SNES loading.
+- Fixed upstream v0.8 spi_receive() prototype mismatch.
+- Safely pads the final partial 32-bit raw-ROM transfer word.
