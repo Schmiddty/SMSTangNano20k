@@ -5,14 +5,6 @@ SMSTang is a Sega Master System / Game Gear FPGA core for the **Sipeed Tang Nano
 
 This release continues the work of the original SMSTang and NANO-BLAST projects, together with the upstream MiSTer core and the shared Tang Nano firmware ecosystem.
 
-## Ready-to-use files
-
-- `release-assets/firmware_smstang.bin` — shared firmware; flash at `0x500000`.
-- `release-assets/smstang_nano20k.fs` — FPGA image; flash at `0x000000`.
-- `SD_CARD/cores/smstang_nano20k.bin` — copy to SD card `/cores/`.
-
-These three files are included in the repository and as downloads on the [v1.0.0 GitHub release](https://github.com/Schmiddty/SMSTangNano20k/releases/tag/v1.0.0).
-
 ## Installation
 
 1. Flash `release-assets/firmware_smstang.bin` at SPI flash address `0x500000`.
