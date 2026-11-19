@@ -1,9 +1,11 @@
-
-# SMSTang Nano 20k v1.0.0
+# SMSTang Nano 20k v1.0
 
 SMSTang is a Sega Master System / Game Gear FPGA core for the **Sipeed Tang Nano 20K** (GW2AR-18C). It is a port of the **SMS-MiSTer core** to the Tang Nano 20K platform.
 
 This release continues the work of the original SMSTang and NANO-BLAST projects, together with the upstream MiSTer core and the shared Tang Nano firmware ecosystem.
+
+<img width="735" height="1306" alt="smstangnano20k_1" src="https://github.com/user-attachments/assets/7dbe1272-bc33-474f-8c88-e56dc8066913" />
+
 
 ## Installation
 
