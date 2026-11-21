@@ -1,6 +1,6 @@
 # SMSTang Nano 20k v1.0
 
-SMSTang is a Sega Master System / Game Gear FPGA core for the **Sipeed Tang Nano 20K** (GW2AR-18C). It is a port of the **SMS-MiSTer core** to the Tang Nano 20K platform.
+SMSTang is a Sega Master System FPGA core for the **Sipeed Tang Nano 20K** (GW2AR-18C). It is a port of the **SMS-MiSTer core** to the Tang Nano 20K platform.
 
 This release continues the work of the original SMSTang and NANO-BLAST projects, together with the upstream MiSTer core and the shared Tang Nano firmware ecosystem.
 
@@ -29,7 +29,7 @@ The included firmware retains the original **Select core** menu and scans `SD:/c
 
 Only the SMSTang FPGA source and SMSTang `.fs`/`.bin` images are bundled. Users who want to switch to another system must obtain a compatible Tang Nano 20K core-switch `.bin` image separately and place it in `/cores/`. Select the image using **Select core** and reboot when prompted. Core-switch images are not the same as Gowin `.fs` images used for direct FPGA flashing.
 
-The shared firmware supports ROM paths for `.nes`, `.sms`, `.gg`, `.gb`, `.sfc`, and `.smc`. The selected core determines which formats are meaningful.
+The shared firmware supports ROM paths for `.nes`, `.sms`, `.gb`, `.sfc`, and `.smc`. The selected core determines which formats are meaningful.
 
 ## BlueRetro controller compatibility
 
