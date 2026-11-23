@@ -1,3 +1,11 @@
+# SMSTang v1.1.0
+
+## What's changed in v1.1.0
+
+- HDMI frame totals changed to 1661 × 746 at 74.25 MHz, approximately 59.9222343 Hz, to match SMS raster cadence and eliminate tearing (hardware-tested).
+- `ce_pix`, SMS/core timing, framebuffer, menu, and controls are unchanged.
+- Prebuilt firmware and FPGA images are retained; they were not rebuilt for this release.
+
 # SMSTang v1.0.0
 
 ## Project background
