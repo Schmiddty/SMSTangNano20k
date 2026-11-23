@@ -73,8 +73,7 @@ For the shared firmware build, install `curl`, `unzip`, Python 3, and a RISC-V b
 
 - HDMI frame totals: 1661 × 746 at 74.25 MHz (approximately 59.9222343 Hz).
 - Hardware testing confirmed the tearing fix.
-- No changes to `ce_pix` or SMS/core timing.
-- Existing prebuilt images are retained; they have not been rebuilt for this release.
+- No changes to SMS/core timing.
 
 ## Roadmap
 
