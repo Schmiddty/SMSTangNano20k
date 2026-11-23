@@ -1,8 +1,6 @@
-# SMSTang Nano 20k v1.1.0
+# SMSTang Nano 20k v1.1
 
 SMSTang is a Sega Master System FPGA core for the **Sipeed Tang Nano 20K** (GW2AR-18C). It is a port of the **SMS-MiSTer core** to the Tang Nano 20K platform.
-
-v1.1.0 matches the HDMI frame cadence closely to the SMS raster to eliminate gameplay tearing. The tested timing change affects HDMI frame totals only; the 74.25 MHz pixel clock, `ce_pix`, and SMS/core timing are unchanged.
 
 This release continues the work of the original SMSTang and NANO-BLAST projects, together with the upstream MiSTer core and the shared Tang Nano firmware ecosystem.
 
@@ -80,8 +78,8 @@ For the shared firmware build, install `curl`, `unzip`, Python 3, and a RISC-V b
 
 ## Roadmap
 
-- Fix any outstanding bugs.
 - Port SMSTang to the MiSTle framework.
+- No outstanding bugs known with the current release here (v1.1). Feel free to report any issues.
 
 ## Credits and acknowledgements
 
