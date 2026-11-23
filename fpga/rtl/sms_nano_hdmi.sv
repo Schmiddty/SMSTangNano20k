@@ -381,13 +381,12 @@ always @(posedge clk_pixel)begin
  if(!pixel_resetn)begin audio_fraction<=0;clk_audio<=0;end
 end
 wire[2:0]tmds;wire tmds_clock;
-// Restore the standard 720p HDMI raster used by the original SMSTang,
-// the shared IOSys design. Active picture, sync geometry, and the
-// 74.25 MHz pixel clock remain unchanged. ce_pix and all SMS/core timing
-// enables remain untouched.
-// 1650 x 750 at 74.25 MHz = exactly 60.0000000 Hz.
-hdmi #(.VIDEO_ID_CODE(4),.DVI_OUTPUT(0),.VIDEO_REFRESH_RATE(59.92736),
- .FRAME_WIDTH_OVERRIDE(1652),.FRAME_HEIGHT_OVERRIDE(750),
+// Match HDMI frame cadence closely to the SMS raster to eliminate tearing.
+// Active picture, sync geometry, 74.25 MHz pixel clock, ce_pix, and SMS/core
+// timing remain unchanged. The hardware-tested totals are 1661 x 746.
+// 1661 x 746 at 74.25 MHz = 59.9222343 Hz.
+hdmi #(.VIDEO_ID_CODE(4),.DVI_OUTPUT(0),.VIDEO_REFRESH_RATE(59.92223425598778),
+ .FRAME_WIDTH_OVERRIDE(1661),.FRAME_HEIGHT_OVERRIDE(746),
  .IT_CONTENT(1),.AUDIO_RATE(48000),
  .AUDIO_BIT_WIDTH(16),.START_X(0),.START_Y(0)) hdmi_out(
  .clk_pixel_x5(clk_5x_pixel),.clk_pixel(clk_pixel),.clk_audio(clk_audio),.rgb(rgb),
